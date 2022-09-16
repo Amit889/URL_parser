@@ -1,0 +1,47 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shrinker</h1>
+        <form action="/shortUrls" method="post" class="myform">
+          <input required type="url" placeholder="URL" name="fullUrl" id="input">
+          <button type="submit" id="shrinkbutton">Shrink</button>
+        </form>
+        
+            <table  class="mytable">
+                <thread>
+                    <tr>
+                        <th>Full URL</th>
+                        <th>Short URL</th>
+                        <th>Delete</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <% shortUrls.forEach(shortUrl => { %>
+                    <tr>
+                        
+                        <td id="itemfull"><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                        <td id="itemshort"><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                        <td>
+                            <form action="/deleteitem" method="post"   >
+                                <input id="myid" name="myid"value=<%= shortUrl._id %>>
+                            <button type="submit"  id="deletebutton" >Delete</button>
+                            </form>
+                        </td>
+                        </form>
+                    </tr>
+                   <% }) %>  
+                </tbody>
+            </table>
+      
+        
+    </div>
+</body>
+</html>

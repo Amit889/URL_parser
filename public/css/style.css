@@ -1,0 +1,71 @@
+html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F96167;
+}
+div{
+    width: 92%;
+    min-height: 92%;
+    height: auto;
+    padding: 15px;
+    background-color: #FCE77D;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin-left: 5%;
+    color: brown;
+}
+
+#input{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    padding-left:10px ;
+}
+
+#shrinkbutton{
+    width: 100px;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 10px;
+}
+
+.mytable{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    width: 80%;
+    border-collapse: collapse;
+    overflow: scroll;
+}
+.mytable th,td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#deletebutton{
+    width: 60px;
+
+}
+
+#myid{
+    visibility: hidden;
+    position: absolute;
+}
